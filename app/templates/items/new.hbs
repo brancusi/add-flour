@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col s6">
+    {{md-input label="Ingredient Name" value=model.name}}
+  </div>
+  <div class="col s6">
+    <div id="liquid-bind-demo">
+      {{#liquid-spacer}}
+        {{#each utq in model.conversion.children}}
+          {{unit-type-quantity model=utq unitTypes=controller.unitTypes action="saveUTQ"}}
+        {{/each}}
+      {{/liquid-spacer}}
+    </div>
+  </div>
+  {{md-btn text="Save" action="saveIngredient"}}
+</div>

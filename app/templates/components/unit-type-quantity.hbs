@@ -1,0 +1,18 @@
+<div class="col s12">
+  <div class="col s4">
+    {{select-2
+      content=unitTypes
+      value=model.unitType
+      placeholder="Unit type"
+      allowClear=true
+    }}
+  </div>
+
+  <div class="col s4">
+    {{md-input label="Quantity" value=model.quantity}}
+  </div>
+
+  <div class="col s4">
+    {{md-btn text='Save' action="handleSave"}}  
+  </div>
+</div>

@@ -1,0 +1,37 @@
+@import 'components/color';
+@import 'components/variables';
+
+// Custom color settings go here
+//  darken-1
+$primary-color: color("teal", "darken-1");
+
+$footer-bg-color: color("grey", "darken-4");
+
+@import 'materialize';
+
+/* FIXME: Workaround for https://github.com/Dogfalo/materialize/issues/1079 */
+@each $mdi-icon-name, $mdi-icon-value in $mdi-list-icons {
+  .#{$mdi-prefix}#{$mdi-icon-name}:before {
+    content: "\""+ $mdi-icon-value +"\"";
+  }
+}
+
+ body, .wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.ace_item {
+  background-color: red;
+  color: white;
+}
+
+.ace_composite {
+  background-color: grey;
+  color: white;
+}

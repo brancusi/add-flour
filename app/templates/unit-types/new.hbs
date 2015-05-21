@@ -1,0 +1,21 @@
+<h5>Create a new unit type:</h5>
+
+<div class="row">
+  <div class="col s6">
+    {{md-input value=model.name label="Enter UnitType Name"}}
+    {{md-input value=model.regexpPattern label="regexpPattern"}}
+
+    {{#md-radios selection=model.type}}
+      {{md-radio name='Non standard unit' value='nonstandard'}}
+      {{md-radio name='Unit of weight' value='weight'}}
+      {{md-radio name='Unit of volume' value='volume'}}
+    {{/md-radios}}
+
+    {{#if model.isFactorable}}
+      {{md-input value=model.factor label="Enter Factor"}}
+    {{/if}}
+
+    {{md-btn action='save' text='Save' isDisabled=model.isNotValid}}    
+
+  </div>
+</div>

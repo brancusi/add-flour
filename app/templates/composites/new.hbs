@@ -1,0 +1,15 @@
+<div class="row">
+  <div class='col s6'>
+    <ul>
+      {{#each itemStep in model.children}}
+        {{item-step model=itemStep}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class='col s6'>
+    {{#each item in model.items}}
+      {{item.name}}
+    {{/each}}
+  </div>
+</div>
